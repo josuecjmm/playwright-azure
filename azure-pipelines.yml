@@ -11,14 +11,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: DownloadSecureFile@1
-  inputs:
-    secureFile: ‘.env’
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: $(Agent.TempDirectory)
-    Contents: ‘**\.env’
-    TargetFolder: $(Build.SourcesDirectory)
 - task: NodeTool@0
   inputs:
     versionSpec: '16.x'
