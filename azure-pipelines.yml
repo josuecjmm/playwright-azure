@@ -13,7 +13,7 @@ pool:
 steps:
 - task: DownloadSecureFile@1
   inputs:
-    secureFile: '.env'
+    secureFile: ‘.env’
 - task: CopyFiles@2
   inputs:
     SourceFolder: $(Agent.TempDirectory)
